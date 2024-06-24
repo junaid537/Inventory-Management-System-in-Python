@@ -1,4 +1,3 @@
-# Inventory-Management-System-in-Python
 Install pandas to see data in Tabular form
 Run the command to get data in excel sheet: pip install xlwt openpyxl xlrd
 
@@ -61,4 +60,5 @@ My Assumed format for JSON Data in JSON File is:
             "threshold": 10
         }
     }
+
 

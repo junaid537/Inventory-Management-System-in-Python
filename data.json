@@ -1,0 +1,37 @@
+{
+    "233": {
+        "id": 233,
+        "name": "Dal",
+        "qty": 70,
+        "price": 24.6,
+        "threshold": 10
+    },
+    "323": {
+        "id": 323,
+        "name": "Pepsi",
+        "qty": 10,
+        "price": 23.7878,
+        "threshold": 10
+    },
+    "243": {
+        "id": 243,
+        "name": "Milk",
+        "qty": 20,
+        "price": 34.89,
+        "threshold": 10
+    },
+    "153": {
+        "id": 153,
+        "name": "Laptop",
+        "qty": 34,
+        "price": 89.67,
+        "threshold": 67
+    },
+    "283": {
+        "id": 283,
+        "name": "TV",
+        "qty": 2,
+        "price": 89.78,
+        "threshold": 10
+    }
+}
