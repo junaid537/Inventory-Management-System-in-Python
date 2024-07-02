@@ -31,6 +31,7 @@ class Inventory:
         print(json.dumps(self.products,indent=4))
         df=pd.DataFrame(self.products)
         print(df)
+        print()
         
         
     #To get Data on Excel sheet
@@ -62,6 +63,7 @@ class Inventory:
             if product.threshold:
                 self.products[old]['threshold']=int(product.threshold)
                 print("Threshold Updated successfully, check json file")
+            print()
         else:
             print("Sorry, given Product ID does not exist in the inventory, no update possible !!")
         self.lowStockAlert()
@@ -80,6 +82,7 @@ class Inventory:
         else:
             print("Product details are")
             print("Product ID: {},Product name: {}, Product Price: {} Product Quantity: {}".format(self.products[id]['id'],self.products[id]["name"],self.products[id]['price'],self.products[id]['qty']))
+        print()
     
     #delete method is used to delete a product  
     def delete(self,id):
@@ -89,6 +92,7 @@ class Inventory:
             del self.products[id]
             print("Product with ID {} deleted successfully".format(id))
             self.saveTojson()
+        print()
             
     #totalInventory method is used to print total Inventory value
     def totalInventoryValue(self):
@@ -96,6 +100,7 @@ class Inventory:
         for key in self.products.keys():
             sum+=float(self.products[key]['price'])
         print("Total Inventory Value is {}$".format(sum))
+        print()
     
     #lowStockAlert method alerts on when any product goes below its mininimum threshold  
     def lowStockAlert(self):
@@ -106,6 +111,7 @@ class Inventory:
                 print("ALERT !!! Product {} is going low in stock & has crossed minimum threshold limit by {} units".format(self.products[key]['name'],self.products[key]['threshold']-self.products[key]['qty']))
         if flag==0:
             print("FULL STOCK IN INVENTORY")
+        print()
             
 def main():
     
@@ -123,7 +129,7 @@ def main():
         print("7. Total Inventory Value")
         print("8. Exit") 
         print("9. Get data in Excel Sheet")   
-        
+        print()
         option=input("enter your choice  :")
     
         if option=="1":
@@ -137,6 +143,7 @@ def main():
             threshold=input("enter minimum quantity limit for this product or or else leave  blank by pressing Enter Key :  ")
             product=Products(old,pname,price,qty,threshold)
             i1.update(old,product)
+            print()
             
         elif option=="3":
             pid=input("add product id :  ")
@@ -169,26 +176,32 @@ def main():
                 
             product=Products(pid,pname,float(price),int(qty),int(threshold))
             i1.add(product)
-        
+            print()
+          
         elif option=="4":
             id=input("Enter ID of product whose details you wanna delete")
             i1.delete(id)
+            print()
                
         elif option=="5":
             id=input("Enter ID of product whose details you wanna see")
             i1.showProduct(id)
+            print()
             
         elif option=="6":
             i1.lowStockAlert()
+            print()
             
         elif option=="7":
             i1.totalInventoryValue()
+            print()
             
         elif option=="8":
             return
         
         elif option=="9":
             i1.generateExcelreport()
+            print()
        
         else:
             print("Invalid Input, Please enter from the above given options")
