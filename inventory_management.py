@@ -124,34 +124,34 @@ def main():
         print("8. Exit") 
         print("9. Get data in Excel Sheet")   
         
-        option=input("enter your choice :")
+        option=input("enter your choice  :")
     
         if option=="1":
             i1.display()
             
         elif option=="2":
-            old=input("enter product id :")
-            pname=input("enter new product name or else leave  blank by pressing Enter Key :")
-            qty=input("enter new quantity or else leave  blank by pressing Enter Key :")
-            price=input("enter new price or else leave  blank by pressing Enter Key :")
-            threshold=input("enter minimum quantity limit for this product or or else leave  blank by pressing Enter Key :")
+            old=input("enter product id :  ")
+            pname=input("enter new product name or else leave  blank by pressing Enter Key :  ")
+            qty=input("enter new quantity or else leave  blank by pressing Enter Key :  ")
+            price=input("enter new price or else leave  blank by pressing Enter Key :  ")
+            threshold=input("enter minimum quantity limit for this product or or else leave  blank by pressing Enter Key :  ")
             product=Products(old,pname,price,qty,threshold)
             i1.update(old,product)
             
         elif option=="3":
-            pid=input("add product id :")
-            pname=input("enter product name :")
-            qty=input("enter product quantity :")
-            price=input("enter product price :")
+            pid=input("add product id :  ")
+            pname=input("enter product name :  ")
+            qty=input("enter product quantity :  ")
+            price=input("enter product price :  ")
             threshold=input("enter minimum quantity reqiured for alert notification :")
             if not pid:
-                print("product id not mentioned , start again")
+                print("product id not mentioned , start again  ")
                 continue
             if not pname:
-                print("product name not mentioned , start again")
+                print("product name not mentioned , start again  ")
                 continue
             if not qty:
-                print("product qty not mentioned , start again")
+                print("product qty not mentioned , start again ")
                 continue
             if not price:
                 print("product price not mentioned , start again")
