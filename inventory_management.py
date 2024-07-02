@@ -10,8 +10,6 @@ class Products:
         self.threshold=threshold
     
 class Inventory:
-    
-    
     #constructor that initializes instance variable filename and class/static variable products(dictionary).Also calls load_data()
     def __init__(self,filename):
         self.products={}
@@ -72,7 +70,7 @@ class Inventory:
     
     # saveTojson method saves all the data to json file
     def saveTojson(self):
-        with open("/Users/junaidiqbalkhalidi/Desktop/python ques/project/data.json", "w") as outfile: 
+        with open(self.filename, "w") as outfile: 
             json.dump(self.products, outfile)
     
     #showProduct method is used to view a specific product
@@ -112,7 +110,8 @@ class Inventory:
 def main():
     
     #Inventory Object creation 
-    i1=Inventory("/Users/junaidiqbalkhalidi/Desktop/python ques/project/data.json")
+    i1=Inventory("data.json")
+
     
     while(True):
         print("1. Display all Products")
@@ -131,20 +130,20 @@ def main():
             i1.display()
             
         elif option=="2":
-            old=input("enter product id")
-            pname=input("enter new product name or else leave  blank by pressing Enter Key")
-            qty=input("enter new quantity or else leave  blank by pressing Enter Key")
-            price=input("enter new price or else leave  blank by pressing Enter Key")
-            threshold=input("enter minimum quantity limit for this product or or else leave  blank by pressing Enter Key")
+            old=input("enter product id :")
+            pname=input("enter new product name or else leave  blank by pressing Enter Key :")
+            qty=input("enter new quantity or else leave  blank by pressing Enter Key :")
+            price=input("enter new price or else leave  blank by pressing Enter Key :")
+            threshold=input("enter minimum quantity limit for this product or or else leave  blank by pressing Enter Key :")
             product=Products(old,pname,price,qty,threshold)
             i1.update(old,product)
             
         elif option=="3":
-            pid=input("add product id")
-            pname=input("enter product name")
-            qty=input("enter product quantity")
-            price=input("enter product price")
-            threshold=input("enter minimum quantity reqiured for alert notification")
+            pid=input("add product id :")
+            pname=input("enter product name :")
+            qty=input("enter product quantity :")
+            price=input("enter product price :")
+            threshold=input("enter minimum quantity reqiured for alert notification :")
             if not pid:
                 print("product id not mentioned , start again")
                 continue
@@ -160,9 +159,7 @@ def main():
             if not threshold:
                 print("product threshold not mentioned , start again")
                 continue
-            if price.isnumeric()==False or price.is_float()==False: 
-                print("product price is not numerical , start again")
-                continue
+            
             if qty.isnumeric()==False:
                 print("product qty is not numerical , start again")
                 continue
@@ -199,3 +196,10 @@ def main():
 #Initiation of the program happens here with the main function call               
 if __name__ == '__main__':
     main()
+    
+    
+    '''
+    if price.isnumeric()==False or price.is_float()==False: 
+                print("product price is not numerical , start again")
+                continue
+    '''
