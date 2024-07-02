@@ -124,7 +124,7 @@ def main():
         print("8. Exit") 
         print("9. Get data in Excel Sheet")   
         
-        option=input("enter your choice")
+        option=input("enter your choice :")
     
         if option=="1":
             i1.display()
