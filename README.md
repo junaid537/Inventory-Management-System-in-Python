@@ -1,9 +1,11 @@
-PLEASE CHECK THE VERSION OF PYTHON !!!
+PLEASE CHECK THE VERSION OF PYTHON !!! 
 REQUIRED VERSION :
 python3 --version  : Python 3.11.1
-
+PLEASE INSTALL THE BELOW MODULES !!
 Install pandas to see data in Tabular form
 Run the command to get data in excel sheet: pip install xlwt openpyxl xlrd
+
+
 
 Run my program by running the command : python3 inventory_management.py
 
