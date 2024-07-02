@@ -198,8 +198,4 @@ if __name__ == '__main__':
     main()
     
     
-    '''
-    if price.isnumeric()==False or price.is_float()==False: 
-                print("product price is not numerical , start again")
-                continue
-    '''
+   
