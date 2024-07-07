@@ -66,6 +66,7 @@ class Inventory:
             print()
         else:
             print("Sorry, given Product ID does not exist in the inventory, no update possible !!")
+            print()
         self.lowStockAlert()
         self.saveTojson()
         self.display()
