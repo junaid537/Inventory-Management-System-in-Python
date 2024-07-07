@@ -1,8 +1,7 @@
-PLEASE CHECK THE VERSION OF PYTHON !!! 
+PLEASE CHECK THE VERSION OF PYTHON !!! python3 --version
 
 
-REQUIRED VERSION :
-python3 --version  : Python 3.11.1
+REQUIRED VERSION : Python 3.11.1
 
 
 
