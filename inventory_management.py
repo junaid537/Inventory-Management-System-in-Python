@@ -52,21 +52,20 @@ class Inventory:
         if old in self.products.keys():
             if product.name:
                 self.products[old]['name']=product.name
-                print("Name Updated successfully, check json file")
+                print("Name Updated successfully, check json file \n")
             if product.qty:
                 self.products[old]['qty']=int(product.qty)
-                print("Qty Updated successfully, check json file")
+                print("Qty Updated successfully, check json file \n")
                 
             if product.price:
                 self.products[old]['price']=float(product.price)
-                print("Price Updated successfully, check json file")
+                print("Price Updated successfully, check json file \n")
             if product.threshold:
                 self.products[old]['threshold']=int(product.threshold)
-                print("Threshold Updated successfully, check json file")
+                print("Threshold Updated successfully, check json file \n")
             print()
         else:
-            print("Sorry, given Product ID does not exist in the inventory, no update possible !!")
-            print()
+            print("Sorry, given Product ID does not exist in the inventory, no update possible !! \n")
         self.lowStockAlert()
         self.saveTojson()
         self.display()
