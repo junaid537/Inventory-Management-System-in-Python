@@ -81,7 +81,7 @@ class Inventory:
             print("No such product exists")
         else:
             print("Product details are")
-            print("Product ID: {},Product name: {}, Product Price: {} Product Quantity: {}".format(self.products[id]['id'],self.products[id]["name"],self.products[id]['price'],self.products[id]['qty']))
+            print("Product ID: {},Product name: {}, Product Price: {} Product Quantity: {} \n".format(self.products[id]['id'],self.products[id]["name"],self.products[id]['price'],self.products[id]['qty']))
         print()
     
     #delete method is used to delete a product  
